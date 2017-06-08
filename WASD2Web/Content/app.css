@@ -1,0 +1,103 @@
+﻿body {
+   font-family: 'Palanquin Dark', sans-serif;
+    color:white;
+    background-color:#2266bb;
+}
+
+h1 {
+    color:#2266bb;
+    margin:0px;
+}
+
+/*Eliminates the Gap at the bottom of the Navigation Bar*/
+.navbar  {
+    margin-bottom:0px;
+}
+
+/*Creates a full screen background image; in conjunction with Javascript call to re-size*/
+.fill-screen {
+    background-size:cover;
+    background-position:center;
+
+    /*Flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+    http://tutorialzine.com/2015/09/quick-tip-the-simplest-way-to-center-elements-vertically-and-horizontally/
+    .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*/
+
+
+
+/*Header*/
+h6 {
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    color:orange;
+    letter-spacing:4px;
+    /* 16 * 0.0625 = 1px */
+    /*letter-spacing: 0.0625em;*/
+}
+
+
+/*About Section*/
+
+.about-andrew {
+       font-family: 'Droid Serif', serif;
+       font-size:large;
+       margin-left:25px;
+
+ }
+
+/*Quotes on the homepage*/
+blockquote {
+    border-color:#2da240;
+    font-family: serif;
+    font-size:xx-large;
+    text-shadow: 2px 2px 4px #000000; /*DropShadow - needed with white on gray/white */
+}
+blockquote footer {
+    color:silver;
+}
+
+
+/*Adds a cool effect; doesn't work on Mobile Devices*/
+.fixed-attachment{
+    background-attachment:fixed;
+}
+@media(max-width:1024px){
+.fixed-attachment{
+    background-attachment:scroll;
+}
+}
+
+/*Black Spaces between the Pictures*/
+.content-filler {
+    min-height:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    font-size:x-small;
+    margin-top:25px;
+    text-align:center;
+    color:whitesmoke;
+}
+
+.lyrics {
+           font-family: 'Droid Serif', serif;
+           font-size:12px;
+           letter-spacing:2px;
+           text-align:justify;
+    }
