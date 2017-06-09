@@ -26,20 +26,20 @@
     <link rel="stylesheet" href="../Content/bootstrap-theme.min.css"/>
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="../Content/app.css" rel="stylesheet" />
+    <style>
+        a i {
+            color:darkgray;
+        }
+
+        a i:hover {
+            color:darkblue
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
        <!--Header  (remove, container-fluid and move to the DIV inside the Navbar-->
         <header> 
-
-
-  <a style="color:white;" href="#"><i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>&nbsp;</a>
-  <a style="color:white;"  href="#"><i class="fa fa-warning fa-1x" aria-hidden="true"></i>&nbsp;</a>
-  <a style="color:white;"  href="#"><i class="fa fa-file-o fa-1x" aria-hidden="true"></i>&nbsp;</a>
-  <a style="color:white;"  href="#"><i class="fa fa-car fa-1x" aria-hidden="true"></i>&nbsp;</a>
-  <a style="color:white;"  href="#"><i class="fa fa-sun-o fa-1x" aria-hidden="true"></i>&nbsp;</a>
-  <a style="color:white;"  href="#"><i class="fa fa-cog fa-1x" aria-hidden="true"></i>&nbsp;</a>
-
 
         <!--Navigation-->
         <nav class="navbar navbar-default">
@@ -48,13 +48,13 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                <!-- <i class="fa fa-podcast fa-2x" aria-hidden="true"></i>  -->
-                   
-                <h1 style="margin:0px;padding:0px;">WASDhub</h1>
+               <img src="../images/Miami-Dade-County-Logo.jpg" style="max-height:45px" />
+              
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-middle">
                 <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#Bluebook">Bluebook</a></li>
                 <li><a href="#eNet">eNet</a></li>
@@ -62,10 +62,30 @@
                   <li><a href="#MetroNet">MetroNet</a></li>
                   <li><a href="#MiamiDade.gov">MiamiDade.gov</a></li>
                   <li><a href="#MiamiDade/water">MiamiDade/water</a></li>
-              </ul>
+                  <li><a href="#"><i class="fa fa-info-circle fa-lg"; aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#"><i class="fa fa-warning fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#"><i class="fa fa-file-o fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#"><i class="fa fa-car fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+              </ul> 
+            <!-- add search form -->
+            <form class="nav navbar-nav navbar-right" role="search">
+                <div class="input-group" style="padding-top:6px;">
+                    <input type="text" class="form-control" placeholder="Search this site">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </form>
 
-            </div><!-- /.navbar-collapse -->
+            </div><!-- /.navbar-collapse --> 
           </div><!-- /.container-fluid -->
+
+           
+
        </nav>
        </header>
 
@@ -74,10 +94,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="fill-screen" style="background-image:url(../images/miamibeach1.jpg);"> 
-                    <img src="../images/iggyPop.jpg" class="img-circle" style="max-height:200px;padding-left:15px;padding-right:15px;" alt="Andrew Sims"/><br />
+                    <img src="../images/oksanabaiul.jpg" style="max-height:200px;padding-left:15px;padding-right:15px;" alt="Oksana Baiul"/><br />
                     <blockquote>
-                           <p>Second only to the sea, the Miami sky has been the greatest comfort in my life past 50. On a good day, when the wind blows from the south, the light here is diffuse and forgiving.</p>
-                             <footer>American singer-songwriter, musician and actor<cite title="Source Title">Iggy Pop</cite></footer> 
+                           <p>One of my favorite vacation places is Miami, because of the people, the water and the beach - of course - and the architecture on Miami Beach is so wonderful.</p>
+                             <footer>American Figure Skater<cite title="Source Title">Oksana Baiul</cite></footer> 
                     </blockquote>
                 </div>
             </div> 

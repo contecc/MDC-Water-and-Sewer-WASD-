@@ -36,7 +36,7 @@ namespace WASD2Web
             {
                 clientContext.Load(clientContext.Web, web => web.Title);
                 clientContext.ExecuteQuery();
-                Response.Write(clientContext.Web.Title);
+                //Response.Write(clientContext.Web.Title);
             }
         }
     }
