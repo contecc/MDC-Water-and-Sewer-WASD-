@@ -1,11 +1,11 @@
 ﻿body {
    font-family: 'Palanquin Dark', sans-serif;
     color:white;
-    background-color:#2266bb;
+    background-color:#225378;
 }
 
 h1 {
-    color:#2266bb;
+    color:#225378;
     margin:0px;
 }
 
@@ -42,7 +42,7 @@ h6 {
     margin:0px;
     padding:0px;
     text-transform:uppercase;
-    color:orange;
+    color:EB7F00;
     letter-spacing:4px;
     /* 16 * 0.0625 = 1px */
     /*letter-spacing: 0.0625em;*/
@@ -60,7 +60,7 @@ h6 {
 
 /*Quotes on the homepage*/
 blockquote {
-    border-color:#2da240;
+    border-color:#1695A3;
     font-family: serif;
     font-size:xx-large;
     text-shadow: 2px 2px 4px #000000; /*DropShadow - needed with white on gray/white */

@@ -23,10 +23,11 @@
 
     <!--StyleSheets-->
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../Content/bootstrap-theme.min.css"/>
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="../Content/app.css" rel="stylesheet" />
     <style>
+        /*Font Awesome Icons - Key Info*/
         a i {
             color:darkgray;
         }
@@ -34,12 +35,28 @@
         a i:hover {
             color:darkblue
         }
+
+        blockquote footer {
+            color:rgba(238, 162, 54, 1);
+        }
+
+        #carousel .carousel-container {
+    padding: 0;
+}
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
        <!--Header  (remove, container-fluid and move to the DIV inside the Navbar-->
         <header> 
+            <!-- Functional, dismissable alert.  Need a script to turn on off 
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                Public safety officials use timely and reliable systems to 
+                <a href="#" class="alert-link">alert you and your family</a> 
+                in the event of natural or man-made disasters. 
+            </div>
+            -->
 
         <!--Navigation-->
         <nav class="navbar navbar-default">
@@ -92,6 +109,145 @@
 
         <!--Main-->
         <div class="container-fluid">
+            <!--Blank Row Filler-->
+            <div class="content-filler" style="padding-top:15px;padding-bottom:15px;">
+
+
+                            <div id="marvelCarousel" class="carousel slide" data-ride="carousel">
+                             <!--Indicators-->
+                             <ol class="carousel-indicators">
+                                 <li data-target="#marvelCarousel" data-slide-to="0" class="active"></li>
+                                 <li data-target="#marvelCarousel" data-slide-to="1"></li>
+                                 <li data-target="#marvelCarousel" data-slide-to="2"></li>
+                                 <li data-target="#marvelCarousel" data-slide-to="3"></li>
+                                 <li data-target="#marvelCarousel" data-slide-to="4"></li>
+                                 <li data-target="#marvelCarousel" data-slide-to="5"></li>
+                             </ol>
+
+                             <!--Slides-->
+                            <div  class="carousel-inner" style=" width:100%; height: 400px !important;" role="listbox">
+
+
+                                <div class="item">
+                                    <img src="../images/miamibeach1.jpg" alt="miamibeach1.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>Marvel 1</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="../images/miamibeach2.jpg" alt="miamibeach2.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>Marvel 2</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="../images/miamibeach3.jpg" alt="miamibeach3.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>Marvel 3</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                    </div>
+                                </div>
+                
+
+                                <div class="item">
+                                    <img src="../images/marvel4.jpg" alt="Marvel4.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>Marvel 4</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                    </div>
+                                </div>
+                
+                                  <div class="item active">
+                                    <img src="../images/miamibeach1.jpg" alt="miamibeach1.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>Marvel 5</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                    </div>
+                                </div>
+                                 <div class="item">
+                                    <img src="../images/miamibeach2.jpg" alt="Marvel6.jpg" />
+                                    <div class="carousel-caption">
+                                        <h3>Marvel 6</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                    </div>
+                                </div>
+                            </div> <!--End Inner Container-->
+
+
+                            <!-- Controls -->
+                              <a class="left carousel-control" href="#marvelCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="right carousel-control" href="#marvelCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+
+
+                        </div> <!--End Carousel-->
+            </div>
+
+
+            <!--Blank Row Filler-->
+            <div class="content-filler">
+
+
+                
+                  <div class="col-sm-3">
+                    <div class="thumbnail">
+                      <img src="../images/sunlight1.jpg" />
+                      <div class="caption">
+                        <h3>Capital Project Expenditure</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="col-sm-3">
+                    <div class="thumbnail">
+                      <img src="../images/sunlight2.jpg" />
+                      <div class="caption">
+                        <h3>Employee Training Reports</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                
+
+                  <div class="col-sm-3">
+                    <div class="thumbnail">
+                      <img src="../images/sunlight3.jpg" />
+                      <div class="caption">
+                        <h3>Construction Contracts</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                
+
+                  <div class="col-sm-3">
+                    <div class="thumbnail">
+                      <img src="../images/sunlight4.jpg" />
+                      <div class="caption">
+                        <h3>Water Distribution Reports</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                
+                                   
+            </div>
+
+
+
             <div class="row">
                 <div class="fill-screen" style="background-image:url(../images/miamibeach1.jpg);"> 
                     <img src="../images/oksanabaiul.jpg" style="max-height:200px;padding-left:15px;padding-right:15px;" alt="Oksana Baiul"/><br />
@@ -104,10 +260,10 @@
 
             <!--Blank Row Filler-->
             <div class="content-filler">
-                <blockquote>
-                            <p>The iconic Doral was once a beacon for the ultimate in luxury golf resorts, and we have fully restored it to its prior grandeur - and then some. Besides the sun, golf, and amazing Latin food, Miami is a city of culture that has something for everyone.</p>
-                             <footer>American Businesswoman<cite title="Source Title">Ivanka Trump</cite></footer>  
-                </blockquote>
+                   <blockquote>
+                            <p>The Miami Dolphins have to be taken seriously. Here's a team that seems to be jelling.</p>
+                             <footer>American Commentator &nbsp;&nbsp;<cite title="Source Title">Al Michaels</cite></footer>  
+                   </blockquote>
             </div>
 
 
@@ -154,12 +310,15 @@
 
 
                     
-                    <a name="Contact"><h5>Contact US</h5></a>
-                    <a href="https://www.facebook.com/miamidade"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-	                <a href="https://twitter.com/miamidade"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-	                <a href="mailto:admin@miamidade.gov"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                    <a name="Contact" style="color:white;"><h5>Contact Us</h5></a>
+                    <a href="https://www.facebook.com/MiamiDadeWater"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	                <a href="https://twitter.com/MiamiDadeWater"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	                <a href="mailto:BREWER@miamidade.gov"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
 
-                   <address>111 NW 1st St, Miami, FL 33128</address>
+                   <address>3071 SW 38th Ave Miami, Florida, FL 33146</address>
+                    <address>(305) 665-7477</address>
+                    <address><a href="https://www.miamidade.gov/water" style="color:white;">www.miamidade.gov/water</a></address>
+                    
 
                     <p>All Rights Reserved.  &copy; 2017 MiamiDade.gov<p>
                 </div>
