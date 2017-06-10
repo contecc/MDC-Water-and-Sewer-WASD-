@@ -22,6 +22,8 @@
     <script type="text/ecmascript" src="../Scripts/bootstrap.min.js"></script> 
 
     <!--StyleSheets-->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet"> 
+
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
@@ -40,9 +42,32 @@
             color:rgba(238, 162, 54, 1);
         }
 
-        #carousel .carousel-container {
-    padding: 0;
-}
+        .card {
+            max-width:250px;
+            padding:10px;
+        }
+
+        /*Carousel Slider*/
+        .slider-size {
+        height: 325px; /* This is your slider height */
+        }
+        .carousel {
+        width:100%; 
+        margin:0 auto; /* center your carousel if other than 100% */ 
+        }
+        .container-fluid {
+            padding-left:0px;
+            padding-right:0px;
+        }
+
+        .carousel {
+            font-family: 'Droid Serif', serif;
+            
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+        }
+        
     </style>
 </head>
 <body>
@@ -88,7 +113,7 @@
               </ul> 
             <!-- add search form -->
             <form class="nav navbar-nav navbar-right" role="search">
-                <div class="input-group" style="padding-top:6px;">
+                <div class="input-group" style="padding-top:6px;max-width:350px;">
                     <input type="text" class="form-control" placeholder="Search this site">
                     <span class="input-group-btn">
                         <button type="submit" class="btn btn-default">
@@ -110,141 +135,125 @@
         <!--Main-->
         <div class="container-fluid">
             <!--Blank Row Filler-->
-            <div class="content-filler" style="padding-top:15px;padding-bottom:15px;">
+            <div class="content-filler" style="margin-top:0px;padding-top:0px;padding-left:0px;padding-right:0px;">
+                      <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example" data-slide-to="1"></li>
+                        <li data-target="#carousel-example" data-slide-to="2"></li>
+                      </ol>
 
-
-                            <div id="marvelCarousel" class="carousel slide" data-ride="carousel">
-                             <!--Indicators-->
-                             <ol class="carousel-indicators">
-                                 <li data-target="#marvelCarousel" data-slide-to="0" class="active"></li>
-                                 <li data-target="#marvelCarousel" data-slide-to="1"></li>
-                                 <li data-target="#marvelCarousel" data-slide-to="2"></li>
-                                 <li data-target="#marvelCarousel" data-slide-to="3"></li>
-                                 <li data-target="#marvelCarousel" data-slide-to="4"></li>
-                                 <li data-target="#marvelCarousel" data-slide-to="5"></li>
-                             </ol>
-
-                             <!--Slides-->
-                            <div  class="carousel-inner" style=" width:100%; height: 400px !important;" role="listbox">
-
-
-                                <div class="item">
-                                    <img src="../images/miamibeach1.jpg" alt="miamibeach1.jpg" />
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                                <div class="item active">
+                                  <div style="background:url(../images/slideWater2.jpg) center center; 
+                                          background-size:cover;" class="slider-size">
                                     <div class="carousel-caption">
-                                        <h3>Marvel 1</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                      <h2 style="color:#F3FFE2">Clean Water Starts Here</h2>
+                                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <img src="../images/miamibeach2.jpg" alt="miamibeach2.jpg" />
-                                    <div class="carousel-caption">
-                                        <h3>Marvel 2</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
-                                    </div>
+                                  </div>
                                 </div>
 
                                 <div class="item">
-                                    <img src="../images/miamibeach3.jpg" alt="miamibeach3.jpg" />
+                                  <div style="background:url(../images/slideBeach1.png) center center; 
+                                          background-size:cover;" class="slider-size">
                                     <div class="carousel-caption">
-                                        <h3>Marvel 3</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                      <h2>Water Inspections on 15 July</h2>
+                                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
                                     </div>
+                                  </div>
                                 </div>
-                
 
                                 <div class="item">
-                                    <img src="../images/marvel4.jpg" alt="Marvel4.jpg" />
+                                  <div style="background:url(../images/slideWaterPipe1.jpg) center center; 
+                                          background-size:cover;" class="slider-size">
                                     <div class="carousel-caption">
-                                        <h3>Marvel 4</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                      <h2>Celebrate our Field Workers</h2>
+                                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
                                     </div>
+                                  </div>
                                 </div>
-                
-                                  <div class="item active">
-                                    <img src="../images/miamibeach1.jpg" alt="miamibeach1.jpg" />
+
+                                <div class="item">
+                                  <div style="background:url(../images/slideArchitect.jpg) center center; 
+                                          background-size:cover;" class="slider-size">
                                     <div class="carousel-caption">
-                                        <h3>Marvel 5</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
+                                      <h2>Planning Meeting</h2>
+                                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
                                     </div>
+                                  </div>
                                 </div>
-                                 <div class="item">
-                                    <img src="../images/miamibeach2.jpg" alt="Marvel6.jpg" />
-                                    <div class="carousel-caption">
-                                        <h3>Marvel 6</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa</p>
-                                    </div>
-                                </div>
-                            </div> <!--End Inner Container-->
+
+                          </div>
 
 
-                            <!-- Controls -->
-                              <a class="left carousel-control" href="#marvelCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="right carousel-control" href="#marvelCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
 
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                    </div>
 
-                        </div> <!--End Carousel-->
+ 
             </div>
 
 
             <!--Blank Row Filler-->
             <div class="content-filler">
-
-
-                
-                  <div class="col-sm-3">
+                  <div class="card">
                     <div class="thumbnail">
-                      <img src="../images/sunlight1.jpg" />
+                      <img src="../images/cardHeader3.png" />
                       <div class="caption">
-                        <h3>Capital Project Expenditure</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <h4 class="card-title">Capital Project Expenditures</h4>
+                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader5.jpg" />
+                      <div class="caption">
+                        <h4 class="card-title">Capital Project Expenditures</h4>
+                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader2.jpg" />
+                      <div class="caption">
+                        <h4 class="card-title">Capital Project Expenditures</h4>
+                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader4.png" />
+                      <div class="caption">
+                        <h4 class="card-title">Capital Project Expenditures</h4>
+                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
                         <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
                       </div>
                     </div>
                   </div>
  
-                  <div class="col-sm-3">
-                    <div class="thumbnail">
-                      <img src="../images/sunlight2.jpg" />
-                      <div class="caption">
-                        <h3>Employee Training Reports</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                      </div>
-                    </div>
-                  </div>
+                 
                 
-
-                  <div class="col-sm-3">
-                    <div class="thumbnail">
-                      <img src="../images/sunlight3.jpg" />
-                      <div class="caption">
-                        <h3>Construction Contracts</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                      </div>
-                    </div>
-                  </div>
-                
-
-                  <div class="col-sm-3">
-                    <div class="thumbnail">
-                      <img src="../images/sunlight4.jpg" />
-                      <div class="caption">
-                        <h3>Water Distribution Reports</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                      </div>
-                    </div>
-                  </div>
-                
-                                   
-            </div>
+                                 
+            </div> <!--end row-->
 
 
 
