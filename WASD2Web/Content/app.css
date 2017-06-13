@@ -89,15 +89,24 @@ blockquote footer {
 }
 
 footer {
+    font-family: 'Droid Serif', serif;
     font-size:x-small;
     margin-top:25px;
     text-align:center;
     color:whitesmoke;
 }
 
-.lyrics {
+
+.finePrint {
            font-family: 'Droid Serif', serif;
-           font-size:12px;
-           letter-spacing:2px;
+           font-size:10px;
+           letter-spacing:1px;
            text-align:justify;
+    }
+
+
+.modal-title{
+           font-family: 'Droid Serif', serif;
+           font-size:28px;
+           color:#225378;
     }

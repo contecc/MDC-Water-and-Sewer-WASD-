@@ -38,12 +38,17 @@
             color:darkblue
         }
 
+        footer a i:hover {
+            color:white;
+        }
+
         blockquote footer {
             color:rgba(238, 162, 54, 1);
         }
 
         .card {
             max-width:250px;
+            min-height:400px;
             padding:10px;
         }
 
@@ -74,14 +79,37 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     <form id="form1" runat="server">
        <!--Header  (remove, container-fluid and move to the DIV inside the Navbar-->
         <header> 
-            <!-- Functional, dismissable alert.  Need a script to turn on off 
-            <div class="alert alert-danger alert-dismissible" role="alert">
+            <!-- Functional, dismissable alert.  Need a script to turn on off -->
+            <div id="myAlert" class="alert alert-danger alert-dismissible" role="alert" style="display:none;">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 Public safety officials use timely and reliable systems to 
                 <a href="#" class="alert-link">alert you and your family</a> 
                 in the event of natural or man-made disasters. 
             </div>
-            -->
+            
+
+            <!--Model Popup:  Re-usable-->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content" style="color:black;">
+                  <div class="modal-header">
+                    <img src="../images/Miami-Dade-County-Logo.jpg" style="max-height:45px;float:left;padding-right:25px;" />
+                    <h5 class="modal-title" id="exampleModalLabel">Example Title</h5>
+                  </div>
+                  <div class="modal-body" style="color:black;">
+                    <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
+                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
 
         <!--Navigation-->
         <nav class="navbar navbar-default">
@@ -104,12 +132,16 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                   <li><a href="#MetroNet">MetroNet</a></li>
                   <li><a href="#MiamiDade.gov">MiamiDade.gov</a></li>
                   <li><a href="#MiamiDade/water">MiamiDade/water</a></li>
-                  <li><a href="#"><i class="fa fa-info-circle fa-lg"; aria-hidden="true"></i>&nbsp;</a></li>
-                  <li><a href="#"><i class="fa fa-warning fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
-                  <li><a href="#"><i class="fa fa-file-o fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
-                  <li><a href="#"><i class="fa fa-car fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
-                  <li><a href="#"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
-                  <li><a href="#"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#" onclick="$('#myModal').modal('show')" title="General Information about WASD.  Pages that describe how to contact team, the WASD mission">
+                      <i class="fa fa-info-circle fa-lg"; aria-hidden="true"></i>&nbsp;</a>
+                  </li>
+                  <li><a href="#myModal" onclick="$('#myAlert').show()" title="Emergency: Facilities, Traffic and Weather emergency announcements">
+                      <i class="fa fa-warning fa-lg" aria-hidden="true"></i>&nbsp;</a>
+                  </li>
+                  <li><a href="#myModal" data-toggle="modal"><i class="fa fa-file-o fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#myModal" data-toggle="modal"><i class="fa fa-car fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#myModal" data-toggle="modal"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
+                  <li><a href="#myModal" data-toggle="modal"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;</a></li>
               </ul> 
             <!-- add search form -->
             <form class="nav navbar-nav navbar-right" role="search">
@@ -146,7 +178,19 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                                <div class="item active">
+
+                                 <div class="item active">
+                                  <div style="background:url(../images/slideArchitect.jpg) center center; 
+                                          background-size:cover;" class="slider-size">
+                                    <div class="carousel-caption">
+                                      <h2>Planning Meeting</h2>
+                                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <div class="item">
                                   <div style="background:url(../images/slideWater2.jpg) center center; 
                                           background-size:cover;" class="slider-size">
                                     <div class="carousel-caption">
@@ -176,15 +220,7 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                                   </div>
                                 </div>
 
-                                <div class="item">
-                                  <div style="background:url(../images/slideArchitect.jpg) center center; 
-                                          background-size:cover;" class="slider-size">
-                                    <div class="carousel-caption">
-                                      <h2>Planning Meeting</h2>
-                                      <p>Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.</p>
-                                    </div>
-                                  </div>
-                                </div>
+
 
                           </div>
 
@@ -205,12 +241,13 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 
             <!--Blank Row Filler-->
             <div class="content-filler">
+                <h1 style="color:white;">Reports</h1>
                   <div class="card">
                     <div class="thumbnail">
                       <img src="../images/cardHeader3.png" />
                       <div class="caption">
                         <h4 class="card-title">Capital Project Expenditures</h4>
-                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <h6 class="card-subtitle text-muted">Compliance Report</h6>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
                         <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
                       </div>
@@ -220,8 +257,8 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                     <div class="thumbnail">
                       <img src="../images/cardHeader5.jpg" />
                       <div class="caption">
-                        <h4 class="card-title">Capital Project Expenditures</h4>
-                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <h4 class="card-title">R&R Fund Status</h4>
+                        <h6 class="card-subtitle text-muted">Compliance Report</h6>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
                         <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
                       </div>
@@ -231,8 +268,8 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                     <div class="thumbnail">
                       <img src="../images/cardHeader2.jpg" />
                       <div class="caption">
-                        <h4 class="card-title">Capital Project Expenditures</h4>
-                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <h4 class="card-title">Budget Preparation</h4>
+                        <h6 class="card-subtitle text-muted">Compliance Report</h6>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
                         <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
                       </div>
@@ -242,19 +279,66 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                     <div class="thumbnail">
                       <img src="../images/cardHeader4.png" />
                       <div class="caption">
-                        <h4 class="card-title">Capital Project Expenditures</h4>
-                        <h6 class="card-subtitle text-muted">Sun disappears!</h6>
+                        <h4 class="card-title">CCB / MWM Queries</h4>
+                        <h6 class="card-subtitle text-muted">Compliance Report</h6>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
                         <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
                       </div>
                     </div>
                   </div>
- 
-                 
-                
-                                 
+                      
             </div> <!--end row-->
 
+            <!--Blank Row Filler-->
+            <div class="content-filler" style="vertical-align:top;">
+                
+                <h1 style="color:white;">Projects <br /> & Programs</h1>
+                  <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader2.jpg" />
+                      <div class="caption">
+                        <h4 class="card-title">Employee Recognition</h4>
+                        <h6 class="card-subtitle text-muted">Program</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader5.jpg" />
+                      <div class="caption">
+                        <h4 class="card-title">Site Safety Teams</h4>
+                        <h6 class="card-subtitle text-muted">Project</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader3.png" />
+                      <div class="caption">
+                        <h4 class="card-title">Water Use Permit (WUP)</h4>
+                        <h6 class="card-subtitle text-muted">Water</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+                    <div class="thumbnail">
+                      <img src="../images/cardHeader4.png" />
+                      <div class="caption">
+                        <h4 class="card-title">CCB / MWM Queries</h4>
+                        <h6 class="card-subtitle text-muted">Compliance Report</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                      </div>
+                    </div>
+                  </div>
+                      
+            </div> <!--end row-->
 
 
             <div class="row">
@@ -297,8 +381,8 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
             <div class="row">
                 <div class="fill-screen" style="background-image:url(../images/miamibeach3.jpg);"> 
                     <blockquote>
-                        <p>If there was any other place I would live, other than Miami, it would be California. It's beautiful. The weather is just gorgeous, I love being here, too.</p>
-                        <footer>Singer Songwriter &nbsp;&nbsp;<cite title="Source Title">Jon Secada</cite></footer>  
+                        <p>Miami is one of the great cultural melting pots in the world. I love working and living here.</p>
+                        <footer>American Actor&nbsp;&nbsp;<cite title="Source Title">David Caruso</cite></footer>  
                      </blockquote>
                 </div>
             </div> 
@@ -332,9 +416,9 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                     <p>All Rights Reserved.  &copy; 2017 MiamiDade.gov<p>
                 </div>
                 <div class="col-md-4">
-                    <p class="lyrics">If you have questions or comments for the Miami-Dade Water & Sewer Department – including billing, service or account questions – please fill out this form. Include detailed information to ensure the message is properly routed.</p>
+                    <p class="finePrint">If you have questions or comments for the Miami-Dade Water & Sewer Department – including billing, service or account questions – please fill out this form. Include detailed information to ensure the message is properly routed.</p>
 
-                    <p class="lyrics">People who require assistance because of their disabilities in order to participate in the programs, activities or services of the Water & Sewer Department, may contact Cecilia Brewer-McDuffie at 786-552-8669 or BREWER@miamidade.gov (only for disability-related matters). </p>
+                    <p class="finePrint">People who require assistance because of their disabilities in order to participate in the programs, activities or services of the Water & Sewer Department, may contact Cecilia Brewer-McDuffie at 786-552-8669 or BREWER@miamidade.gov (only for disability-related matters). </p>
                 </div>
              </div>
         </footer>
